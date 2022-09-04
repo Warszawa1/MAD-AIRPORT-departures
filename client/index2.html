@@ -4,29 +4,30 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MAD_DEPARTURES</title>
+        <title>MAD_ARRIVALS</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="departures">
-            <h1>Departures  MADRID-BARAJAS  ____  🛫 </h1><a href="index2.html"><button id="arrivals-button"><h1>Arrivals  MADRID-BARAJAS  ____  🛬</h1></button></a></h1> 
+        <div class="arrivals">
+            <h1>Arrivals  MADRID-BARAJAS  ____  🛬</h1><a href="index.html"><button id="departures-button"><h1>Departures  MADRID-BARAJAS  ____  🛫 </h1></button></a></h1> 
             <table>
                 <thead>
                     <tr>
                         <th id="time">TIME</th>
-                        <th id="destination">DESTINATION</th>
+                        <th id="origin">ORIGIN</th>
+                        <th id="airline">AIRLINE</th>
                         <th id="flight">FLIGHT</th>
                         <th id="terminal">TERMINAL</th>
-                        <th id="gate">GATE</th>
                         <th id="remarks">REMARKS</th>
                     </tr>
                 </thead>
                 <tbody id="table-body"></tbody>
             </table>
         </div>
-    <script src="app.js"></script>
+
+    <script src="app2.js"></script>
     </body>
 </html>

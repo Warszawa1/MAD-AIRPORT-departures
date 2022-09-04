@@ -43,15 +43,14 @@ h1 {
 }
 
 .arrivals {
-    position: absolute;
+    position: relative;
     border-radius: 10px;
     padding: 10px;
-    bottom: 0; /* attaches the element to the bottom */ /* attaches the element to the right-side */
-    background-color : green;
+    background-color : rgb(6, 7, 6);
     }
 
 .arrivals table {
-    background-color: rgb(117, 179, 37);
+    background-color: rgb(46, 46, 46);
     text-align: left;
 }
 
@@ -82,8 +81,27 @@ h1 {
     border-color: aliceblue;
 }
 
+#departures-button {
+    position: absolute;
+    width: 20rem;
+    top: 0;
+    right: 4px;
+    background-color: rgb(0,0,0);
+    padding: 1px;
+    border: solid 3px rgb(26, 26, 26);
+    border-radius: 10px;
+    font-size: 30px;
+    color: rgb(240,240,240);
+    cursor: pointer;
+} 
+#departures-button:hover {
+    transform: translateX(5px);
+    transition: 0.5s;
+    border-color: aliceblue;
+}
+
 .flip {
-    animation: 0.3s linear flipping;
+    animation: 0.4s linear flipping;
 }
 
 @keyframes flipping {
@@ -104,6 +122,10 @@ h1 {
 
 #destination {
     width: 720px;
+}
+
+#origin {
+    width: 690px;
 }
 
 #flight {

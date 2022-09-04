@@ -1,27 +1,18 @@
 const tableBody = document.getElementById('table-body')
 
-// const getFlight = () => {
-//     fetch('http://localhost:8000/flights')
-//         .then(response => response.json())
-//         .then((flights) => {
-//             populateTable(flights);
-//         })
-//         .catch(err => console.log(err))
-        
-//     }
-const get_flight_departure = () => {
-    fetch('departures.json')
+
+const get_flight_arrivals = () => {
+    fetch('arrivals.json')
         .then(response => response.json())
-        .then((flights) => {
-            populateTable(flights);
+        .then((arrival_flights) => {
+            populateTableArrivals(arrival_flights);
         })
     }
-get_flight_departure()
+get_flight_arrivals()
 
-    // getFlight();
 
-const populateTable = (flights) => {
-    for (const flight of flights) {
+const populateTableArrivals = (arrival_flights) => {
+    for (const flight of arrival_flights) {
         const tableRow = document.createElement('tr')
         // const tableIcon = document.createElement('td')
         // tableIcon.textContent = '🛫'
@@ -29,10 +20,10 @@ const populateTable = (flights) => {
 
         const flightDetails = {
             time: flight.estimadedhour.slice(0, 5),
-            destination: flight.destiny,
+            origin: flight.origin,
+            airline: flight.acronym,
             flight: flight.flightNumber,
             terminal: flight.terminal,
-            gate: flight.firstDoor,
             remarks: flight.state
         }
         console.log(flightDetails)
